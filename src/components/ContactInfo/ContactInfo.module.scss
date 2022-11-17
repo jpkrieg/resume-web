@@ -1,0 +1,12 @@
+.contactInfo {
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &__lineItem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+}
