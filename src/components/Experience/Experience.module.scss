@@ -1,12 +1,17 @@
+@import '../../index.scss';
 .experience {
     &__headerRow {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         &__titleAndSubtitles {
-            &__institution {
+            &__title {
                 color: black;
                 font-size: 20px;
+                letter-spacing: 0.5px;
+            }
+            &__subtitle {
+                font-size: 15px;
                 letter-spacing: 0.25px;
             }
         }
@@ -14,20 +19,7 @@
     &__description {
         padding-top: 5px;
         color: black;
-        font-size: 11px;
+        font-size: 12px;
         line-height: 1.2rem;
     }
-}
-
-ul {
-    margin: 0;
-}
-
-.ul__outer {
-    list-style: "- ";
-    padding-left: 10px !important;
-}
-
-.ul__inner {
-    list-style: "- ";
 }

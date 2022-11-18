@@ -1,20 +1,22 @@
 @import '../../index.scss';
 .section {
     border-radius: 10px;
-    border: 1px solid $primary-color;
+    border: 0.5px solid $primary-color;
     padding: 5px 10px;
     color: $primary-color;
     &__title {
+        // text-transform: uppercase;
         font-size: 25px;
-        font-weight: 500;
-        letter-spacing: 1px;
+        font-weight: 350;
+        letter-spacing: 1.5px;
     }
     hr {
         background-color: $primary-color;
+        height: 0.5px;
     }
     &__children {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
     }
 }

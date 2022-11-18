@@ -1,17 +1,15 @@
-import React from 'react';
 import styles from './Summary.module.scss';
-import data from '../../data';
+import React from 'react';
+import { ISummary } from '../../model/model';
 
-const summary = data.summary;
-
-const Summary = () => {
+const Summary: React.FC<ISummary> = ({title, subtitle, summary}) => {
     return (
         <div className={styles.summary}>
-            <div className={styles.summary__title}>{summary.title}</div>
-            <div className={styles.summary__subtitle}>{summary.subtitle}</div>
+            <div className={styles.summary__title}>{title}</div>
+            <div className={styles.summary__subtitle}>{subtitle}</div>
             <hr />
             <div className={styles.summary__content}>
-                {summary.summary}
+                {summary}
             </div>
         </div>
     )

@@ -1,12 +1,8 @@
 import React from 'react';
+import { ILocationAndDates } from '../../model/model';
 import styles from './LocationAndDates.module.scss';
 
-interface ILocationAndDatesProps {
-    location: string;
-    dates: string;
-}
-
-const LocationAndDates: React.FC<ILocationAndDatesProps> = ({location, dates}) => {
+const LocationAndDates: React.FC<ILocationAndDates> = ({location, dates}) => {
   return (
     <div className={styles.locationAndDates}>
         <div>{location}</div>

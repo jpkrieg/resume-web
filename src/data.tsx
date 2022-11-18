@@ -1,89 +1,106 @@
-import React, { ReactNode } from "react";
-
-interface IResumeData {
-    "summary": {
-        "title": string,
-        "subtitle": string,
-        "summary": string,
-    },
-    "experience": Array<IExperience>,
-    "education": Array<IExperience>
-}
-
-export interface IExperience {
-    institution: string;
-    location: string;
-    subtitle: string;
-    dates: string;
-    description?: string; 
-    descriptionList?: Array<IBulletPoint>;
-}
-
-export interface IBulletPoint {
-    label: string,
-    children?: Array<IBulletPoint>;
-}
+import { IResumeData } from "./model/model";
 
 const data: IResumeData = {
-    "summary": {
-        "title": "John Paul Krieg",
-        "subtitle": "Junior Developer",
-        "summary": "Professional full-stack web developer since 2019. Equipped with a record of success in delivering high quality features, mentoring junior developers, and exercising software craftsmanship skills. Toolkit includes excellent problem solving and communication skills, and an attitude to match. Invested in constantly improving my craft."
+    contactInfo: {
+        email: "jpk806@gmail.com",
+        address: "3345 Oakhill Place, Clarkston, MI 48348",
+        phone: "+1 (586) 747-1401"
     },
-    "experience": [
+    skills: {
+        skillsCategories: [
+            {
+                category: "Programming",
+                skills: [
+                    "JavaScript, TypeScript",
+                    "HTML, CSS (+SASS)",
+                    "React.js",
+                    "Express.js",
+                    "Webpack",
+                    "C#, ASP.NET",
+                    "C & C++",
+                    "SQL",
+                    "Firestore & MongoDB",
+                ]
+            },
+            {
+                category: "Other Software",
+                skills: [
+                    "Google Cloud Platform",
+                    "Git, SVN",
+                    "Visual Studio, VS Code",
+                    "Docker/Podman"
+                ]
+            },
+        ]
+    },
+    summary: {
+        title: "John Paul Krieg",
+        subtitle: "Software Engineer",
+        summary: "Professional full-stack web developer since 2019. Equipped with a record of success in delivering high quality features, solving complicated technical problems, mentoring junior developers, and exercising software craftsmanship skills. Toolkit includes excellent problem solving, technical, and communication skills; and an attitude to match. Invested in constantly improving my craft."
+    },
+    experience: [
         {
-            institution: "Ford Pro",
+            title: "Ford Motor Company",
             location: "Remote",
-            subtitle: "Software Engineer",
+            subtitle: "Software Engineer - Ford Pro Gateway Team",
             dates: "Oct 2021 - Present",
-            descriptionList: [],
-        },
-        {
-            institution: "Epic Systems Corporation",
-            location: "Verona, WI",
-            subtitle: "Software Developer",
-            dates: "July 2019 - July 2021",
-            descriptionList: [
-                {
-                    label: "Facilitated a multi-year transition from a legacy codebase (VB6) to a modern ASP.NET web framework (C# + TypeScript)",
-                    children: [
-                        { label: "Lead developer on two multi-phase web applications" },
-                        { label: "Collaborated on two company-wide \"tentpole\" applications, spanning several development teams and used by thousands of billing and clinical users" },
-                        { label: "Measured, investigated, and optimized performance of our web applications" },
-                        { label: "Participated in end-user feedback sessions to optimize workflows to their needs" },
-                    ]
-                },
-                {
-                    label: "Repaired customer-reported issues by implementing hot-fixes compatible across several versions of Epic's software",
-                },
+            bulletpoints: [
+                "Developed a foundational web platform enabling partnering teams to seamlessly integrate existing commercial web experiences into one cohesive aggregator website, which is now consumed internationally",
+                "Created content development tools that empower Ford Pro application developers (across a variety of tech stacks, including React, Vue, and Angular) to onboard their applications as microservices consumed as Webpack federated modules",
+                "Created content management tools that empower non-technical personnel to easily perform the previously technical task of site content management",
+                "Contributed to our team's Terraform IaC to ensure high availability for our services deployed in GCP",
+                "Mentored interns and junior developers, and assisted with the interviewing process"
             ],
         },
         {
-            institution: "Link Engineering Company",
-            location: "Dearborn, MI",
+            title: "Epic Systems Corporation",
+            subtitle: "Software Developer - Charge Router Team",
+            location: "Verona, WI",
+            dates: "July 2019 - July 2021",
+            bulletpoints: [
+                "Contributed on two tentpole applications, spanning several development teams and used by thousands of billing and clinical users",
+                "Facilitated a multi-year transition from a legacy codebase to a modern web framework",
+                "Lead developer on two multi-phase software modernization projects",
+                "Performance lead for quantifying and optimizing the performance of our web applications",
+                // "Repaired customer-reported issues by implementing hot-fixes compatible across several versions of Epic's software",
+            ],
+        },
+        {
+            title: "Link Engineering Company",
             subtitle: "Software Engineer Intern",
+            location: "Detroit, MI",
             dates: "May 2018 - Aug 2018",
-            descriptionList: [
-                {
-                    label: "Created a proposal for modernizing the company's version control and code documentation practices",
-                },
-                {
-                    label: "Automated test engineers' workflows using custom VBA macros",
-                },
-                {
-                    label: "Developed report templates and test scripts",
-                },
+            bulletpoints: [
+                "Developed VBA data visualization scripts to automatically produce reports on dynamometer telemetry data",
+                "Automated test engineers' workflows using custom VBA macros",
             ],
         },
     ],
-    "education": [
+    education: [
         {
-            institution: "University of Michigan College of Engineering",
-            location: "Ann Arbor, MI",
+            title: "University of Michigan Engineering",
             subtitle: "BSE Computer Science and Engineering | Cum Laude",
+            location: "Ann Arbor, MI",
             dates: "Aug 2015 - May 2019",
-            description: "Studies Included: Web Development, Operating Systems, Machine Learning, Software Engineering, Mobile Application Development, Computer Security, Logic Design, and Database Management Systems",
+            description: "Studied: Web Development, Operating Systems, Machine Learning, Software Engineering, Mobile Application Development, Computer Security, Logic Design, and Database Management Systems",
         }
+    ],
+    involvement: [
+        {
+            subtitle: "Michigan Marching Band - Trumpet Player",
+            // location: "Ann Arbor, MI",
+            dates: "Aug 2015 - May 2019",
+        },
+        {
+            subtitle: "Arborhacks - Finance Coordinator",
+            // location: "Ann Arbor, MI",
+            dates: "Jan 2017 - Dec 2018",
+        },
+        {
+            subtitle: "MIBYTES - Instructional Aide",
+            // location: "Ann Arbor, MI",
+            dates: "Summer 2017",
+        },
     ]
 }
 

@@ -1,23 +1,23 @@
-import React from 'react';
-import { IExperience } from '../../data';
-import LocationAndDates from '../LocationAndDates/LocationAndDates';
 import styles from './Experience.module.scss';
+import React from 'react';
+import { IExperience } from '../../model/model';
+import LocationAndDates from '../LocationAndDates/LocationAndDates';
 
 const Experience: React.FC<IExperience> = ({
-    institution,
+    title: institution,
     location,
     subtitle,
     dates,
     description,
-    descriptionList
+    bulletpoints
 }) => {
-    console.log(descriptionList)
+    console.log(bulletpoints)
     return (
         <div className={styles.experience}>
             <div className={styles.experience__headerRow}>
                 <div className={styles.experience__headerRow__titleAndSubtitles}>
-                    <div className={styles.experience__headerRow__titleAndSubtitles__institution}>{institution}</div>
-                    <div>{subtitle}</div>
+                    <div className={styles.experience__headerRow__titleAndSubtitles__title}>{institution}</div>
+                    <div className={styles.experience__headerRow__titleAndSubtitles__subtitle}>{subtitle}</div>
                 </div>
                 <LocationAndDates
                     location={location}
@@ -27,17 +27,12 @@ const Experience: React.FC<IExperience> = ({
             <div className={styles.experience__description}>
                 <>
                     {description}
-                    {descriptionList &&
+                    {bulletpoints &&
                         <ul className={styles.ul__outer}>
-                            {descriptionList.map((d) => {
+                            {bulletpoints.map((bulletpoint) => {
                                 return (
                                     <>
-                                        <li className={styles.li}>{d.label}</li>
-                                        {d.children &&
-                                            <ul className={styles.ul__inner}>
-                                                {d.children.map((child) => <li className={styles.li}>{child.label}</li>)}
-                                            </ul>
-                                        }
+                                        <li className={styles.li}>{bulletpoint}</li>
                                     </>
                                 )
                             })}
