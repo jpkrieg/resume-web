@@ -11,7 +11,6 @@ const Experience: React.FC<IExperience> = ({
     description,
     bulletpoints
 }) => {
-    console.log(bulletpoints)
     return (
         <div className={styles.experience}>
             <div className={styles.experience__headerRow}>
@@ -32,7 +31,7 @@ const Experience: React.FC<IExperience> = ({
                             {bulletpoints.map((bulletpoint) => {
                                 return (
                                     <>
-                                        <li className={styles.li}>{bulletpoint}</li>
+                                        <li key={bulletpoint} className={styles.li}>{bulletpoint}</li>
                                     </>
                                 )
                             })}

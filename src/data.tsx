@@ -9,10 +9,11 @@ const data: IResumeData = {
     skills: {
         skillsCategories: [
             {
-                category: "Programming",
+                category: "Programming:",
                 skills: [
                     "JavaScript, TypeScript",
                     "HTML, CSS (+SASS)",
+                    "Node.js",
                     "React.js",
                     "Express.js",
                     "Webpack",
@@ -20,23 +21,40 @@ const data: IResumeData = {
                     "C & C++",
                     "SQL",
                     "Firestore & MongoDB",
+                    "Unit testing",
+                    "Infrastructure as Code",
+                    "Micro-services",
+                    "Micro-frontends",
                 ]
             },
             {
-                category: "Other Software",
+                category: "Other Software:",
                 skills: [
                     "Google Cloud Platform",
+                    "Linux, MacOS, Windows",
                     "Git, SVN",
                     "Visual Studio, VS Code",
-                    "Docker/Podman"
+                    "Docker/Podman",
+                    "Drone",
+                    "Harness",
                 ]
             },
         ]
     },
+    interests: [
+        "Woodworking",
+        "College Football",
+        "Formula 1",
+        "Programming",
+        "Homelab/Networking",
+        "Video Games",
+        "Film",
+        "Cars"
+    ],
     summary: {
         title: "John Paul Krieg",
         subtitle: "Software Engineer",
-        summary: "Professional full-stack web developer since 2019. Equipped with a record of success in delivering high quality features, solving complicated technical problems, mentoring junior developers, and exercising software craftsmanship skills. Toolkit includes excellent problem solving, technical, and communication skills; and an attitude to match. Invested in constantly improving my craft."
+        summary: "Professional full-stack web developer since 2019. Equipped with a record of success in delivering high quality features, solving complicated technical problems, mentoring junior developers, and contributing through all phases of the product lifecycle. Toolkit includes excellent problem solving, technical, and communication skills; and an attitude to match."
     },
     experience: [
         {
@@ -45,9 +63,10 @@ const data: IResumeData = {
             subtitle: "Software Engineer - Ford Pro Gateway Team",
             dates: "Oct 2021 - Present",
             bulletpoints: [
-                "Developed a foundational web platform enabling partnering teams to seamlessly integrate existing commercial web experiences into one cohesive aggregator website, which is now consumed internationally",
-                "Created content development tools that empower Ford Pro application developers (across a variety of tech stacks, including React, Vue, and Angular) to onboard their applications as microservices consumed as Webpack federated modules",
-                "Created content management tools that empower non-technical personnel to easily perform the previously technical task of site content management",
+                "Transformed fordpro.com from a simple marketing site into a powerful content delivery platform, including authentication, multimarket support, and localization",
+                "Created powerful tools empowering partners to easily onboard and manage their applications as MFEs",
+                "Enabled non-technical personnel to perform the previously technical task of site content management",
+                "Contributed through all phases of the product lifecycle",
                 "Contributed to our team's Terraform IaC to ensure high availability for our services deployed in GCP",
                 "Mentored interns and junior developers, and assisted with the interviewing process"
             ],

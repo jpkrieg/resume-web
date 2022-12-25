@@ -1,6 +1,7 @@
 export interface IResumeData {
     contactInfo: IContactInfo,
     skills: ISkills,
+    interests: Array<string>,
     summary: ISummary,
     experience: Array<IExperience>,
     education: Array<IExperience>
